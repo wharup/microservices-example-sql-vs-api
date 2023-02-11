@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+    <cache name="codes"
+		   maxBytesLocalHeap="1M"
+           eternal="false"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+    </cache>
+
+    <cache name="customers"
+		   maxBytesLocalHeap="20M"
+           eternal="false"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+    </cache>
+
+    <cache name="users"
+		   maxBytesLocalHeap="5M"
+           eternal="false"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+    </cache>
+
+    <cache name="departments"
+		   maxBytesLocalHeap="1M"
+           eternal="false"
+           overflowToDisk="false"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off">
+    </cache>
+
+</ehcache>
+
+
+
+<!-- <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.ehcache.org/v3"
+    xmlns:jsr107="http://www.ehcache.org/v3/jsr107"
+    xsi:schemaLocation="
+            http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core-3.0.xsd
+            http://www.ehcache.org/v3/jsr107 http://www.ehcache.org/schema/ehcache-107-ext-3.0.xsd">
+
+    <cache alias="codes">
+        <key-type>java.lang.String</key-type>
+        <value-type>java.lang.String</value-type>
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">1000</heap>
+        </resources>
+    </cache>
+    <cache alias="customers">
+        <key-type>java.lang.String</key-type>
+        <value-type>microservices.examples.service.customer.Customer</value-type>
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">100000</heap>
+        </resources>
+    </cache>
+    <cache alias="users">
+        <key-type>java.lang.String</key-type>
+        <value-type>microservices.examples.service.user.User</value-type>
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">100000</heap>
+        </resources>
+    </cache>    
+
+    <cache alias="departments">
+        <key-type>java.lang.String</key-type>
+        <value-type>microservices.examples.service.department.Department</value-type>
+        <expiry>
+            <ttl unit="seconds">30</ttl>
+        </expiry>
+        <resources>
+            <heap unit="entries">100000</heap>
+        </resources>
+    </cache>    
+
+</config> -->
